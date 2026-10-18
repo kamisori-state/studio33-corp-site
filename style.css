@@ -392,3 +392,15 @@ section { padding: 88px 0; }
 .post-cta p { margin: 0 0 16px; }
 @media (max-width: 900px) { .post-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+
+/* お客さまの声 */
+.voices { background: var(--soft); }
+.voice-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+.voice { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px 20px; position: relative; display: flex; flex-direction: column; }
+.voice::before { content: "“"; position: absolute; top: 4px; left: 16px; font-size: 3.2rem; line-height: 1; color: var(--warm); font-weight: 900; }
+.voice blockquote { margin: 14px 0 18px; flex: 1; }
+.voice figcaption { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: .86rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+.voice-service { background: var(--accent-soft); color: var(--accent-dark); font-weight: 700; padding: 2px 10px; border-radius: 999px; }
+.voice-note { color: var(--muted); font-size: .82rem; margin: 22px 0 0; }
+@media (max-width: 900px) { .voice-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .voice-list { grid-template-columns: 1fr; } }
