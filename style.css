@@ -167,7 +167,8 @@ section { padding: 88px 0; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .reason-list, .steps { grid-template-columns: 1fr; }
   .steps li:not(:last-child)::after { right: 50%; top: auto; bottom: -19px; transform: translateX(50%) rotate(135deg); }
-  .site-nav a:not(.btn) { display: none; }
+  .site-nav a:not(.btn):not(.nav-keep) { display: none; }
+  .site-nav { gap: 14px; }
 }
 @media (max-width: 640px) {
   .hero { min-height: 0; flex-direction: column; align-items: stretch; }
