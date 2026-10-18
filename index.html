@@ -189,9 +189,71 @@
   <div class="wrap contact-inner">
     <p class="eyebrow center light">お問い合わせ</p>
     <h2 class="center">パソコンの「困った」、<br>今日ここで手放しませんか。</h2>
-    <p class="center contact-lead">お困りごとを、そのままメールでお送りください。</p>
-    <p class="center"><a class="btn btn-lg btn-white" href="mailto:studio33corp@gmail.com?subject=%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">メールで相談する</a></p>
-    <p class="center contact-mail">studio33corp@gmail.com</p>
+    <p class="center contact-lead">下のフォームに、お困りごとをそのままご記入ください。<br>うまく説明できなくても大丈夫です。</p>
+
+    <form class="contact-form" action="https://formsubmit.co/studio33corp@gmail.com" method="POST" accept-charset="UTF-8">
+      <input type="hidden" name="_subject" value="【Studio33】ホームページからのご相談">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://studio33-corp.net/thanks.html">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="field-row">
+        <label class="field">
+          <span class="label">お名前 <em>必須</em></span>
+          <input type="text" name="お名前" required autocomplete="name" placeholder="世田谷 花子">
+        </label>
+        <label class="field">
+          <span class="label">メールアドレス <em>必須</em></span>
+          <input type="email" name="email" required autocomplete="email" placeholder="example@mail.com">
+        </label>
+      </div>
+
+      <div class="field-row">
+        <label class="field">
+          <span class="label">電話番号 <i>任意</i></span>
+          <input type="tel" name="電話番号" autocomplete="tel" placeholder="090-1234-5678">
+        </label>
+        <label class="field">
+          <span class="label">パソコンの種類 <i>任意</i></span>
+          <select name="パソコンの種類">
+            <option value="">選んでください</option>
+            <option>Windows のノート</option>
+            <option>Windows のデスクトップ</option>
+            <option>Mac</option>
+            <option>分からない</option>
+          </select>
+        </label>
+      </div>
+
+      <fieldset class="field">
+        <legend class="label">ご相談の内容 <i>いくつでも</i></legend>
+        <div class="chips">
+          <label><input type="checkbox" name="ご相談の内容" value="初期設定・セットアップ"><span>初期設定</span></label>
+          <label><input type="checkbox" name="ご相談の内容" value="トラブル対応"><span>トラブル・故障</span></label>
+          <label><input type="checkbox" name="ご相談の内容" value="データ移行・バックアップ"><span>データ移行</span></label>
+          <label><input type="checkbox" name="ご相談の内容" value="ネットワーク・Wi-Fi"><span>Wi-Fi・ネット</span></label>
+          <label><input type="checkbox" name="ご相談の内容" value="セキュリティ対策"><span>セキュリティ</span></label>
+          <label><input type="checkbox" name="ご相談の内容" value="使い方のご相談"><span>使い方</span></label>
+          <label><input type="checkbox" name="ご相談の内容" value="その他"><span>その他</span></label>
+        </div>
+      </fieldset>
+
+      <label class="field">
+        <span class="label">お困りごと <em>必須</em></span>
+        <textarea name="お困りごと" rows="6" required placeholder="例）昨日から電源を入れても画面が真っ暗のままです。仕事の書類が入っているので心配です。"></textarea>
+      </label>
+
+      <label class="agree">
+        <input type="checkbox" required>
+        <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します</span>
+      </label>
+
+      <button class="btn btn-lg btn-submit" type="submit">この内容で相談する</button>
+      <p class="form-note">通常、内容を確認してメールでご連絡します。</p>
+    </form>
+
+    <p class="center contact-mail">メールで直接ご相談の方は <a href="mailto:studio33corp@gmail.com">studio33corp@gmail.com</a> まで</p>
   </div>
 </section>
 
