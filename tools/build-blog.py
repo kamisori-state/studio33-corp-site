@@ -33,7 +33,7 @@ BASE = "https://studio33-corp.net"
 POSTS_DIR = SITE / "blog" / "posts"
 REQUIRED = ["title", "description", "date", "slug", "image", "category"]
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-STATIC_PAGES = ["", "pricing.html", "privacy.html", "terms.html"]
+STATIC_PAGES = ["", "pricing.html", "personal-info.html", "privacy.html", "terms.html"]
 
 md = MarkdownIt("commonmark", {"html": False, "linkify": False}).enable("table")
 
@@ -85,7 +85,7 @@ FOOT = """
   <div class="wrap footer-inner">
     <a class="brand" href="../"><span class="brand-mark">S</span><span>Studio<span class="brand-33">33</span></span></a>
     <p>世田谷区のインターネット・パソコンサポート</p>
-    <nav><a href="../pricing.html">料金</a><a href="./">お役立ち記事</a><a href="../privacy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a></nav>
+    <nav><a href="../pricing.html">料金</a><a href="./">お役立ち記事</a><a href="../personal-info.html">個人情報の取り扱い</a><a href="../privacy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a></nav>
     <p class="copy">&copy; 2026 Studio33</p>
   </div>
 </footer>

@@ -25,7 +25,7 @@ def render(video_id: str, title: str) -> str:
     return f"""<section id="shorts" class="shorts">
   <div class="wrap shorts-inner">
     <div class="shorts-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/{video_id}" title="{t}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      <iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/{video_id}" title="{t}" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="shorts-text">
       <p class="eyebrow">毎朝7時に新作</p>
