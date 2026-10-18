@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="Studio33">
+  <!-- D: two interlocking rings (寄り添う・つながる), minimal -->
+  <circle cx="54" cy="70" r="38" fill="none" stroke="#0f8f86" stroke-width="14"/>
+  <circle cx="98" cy="70" r="38" fill="none" stroke="#16232a" stroke-width="14"/>
+  <path d="M76 39 A38 38 0 0 1 76 101" fill="none" stroke="#0f8f86" stroke-width="14"/>
+  <text x="162" y="82" font-family="Noto Sans JP, Arial, sans-serif" font-weight="500" font-size="52" fill="#16232a" letter-spacing="6">STUDIO</text>
+  <text x="400" y="82" font-family="Noto Sans JP, Arial, sans-serif" font-weight="900" font-size="52" fill="#0f8f86">33</text>
+  <rect x="164" y="98" width="290" height="2" fill="#e3eaec"/>
+  <text x="164" y="124" font-family="Noto Sans JP, sans-serif" font-weight="500" font-size="15" fill="#5d6b72" letter-spacing="4">SETAGAYA PC SUPPORT</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="Studio33">
+  <!-- A: rounded badge with 33 -->
+  <rect x="10" y="10" width="120" height="120" rx="32" fill="#0f8f86"/>
+  <text x="70" y="100" text-anchor="middle" font-family="Noto Sans JP, Arial, sans-serif" font-weight="900" font-size="80" fill="#fff">S</text>
+  <circle cx="112" cy="28" r="9" fill="#ff8a3d"/>
+  <text x="156" y="86" font-family="Noto Sans JP, Arial, sans-serif" font-weight="900" font-size="58" fill="#16232a" letter-spacing="-1">Studio<tspan fill="#0f8f86">33</tspan></text>
+  <text x="159" y="118" font-family="Noto Sans JP, sans-serif" font-weight="700" font-size="17" fill="#5d6b72" letter-spacing="3">世田谷区のパソコンサポート</text>
+</svg>

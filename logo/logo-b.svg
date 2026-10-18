@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="Studio33">
+  <!-- B: laptop screen with a smile check -->
+  <rect x="18" y="22" width="112" height="76" rx="12" fill="none" stroke="#0f8f86" stroke-width="10"/>
+  <path d="M6 112 H142 a6 6 0 0 1 -6 8 H12 a6 6 0 0 1 -6 -8 z" fill="#0f8f86"/>
+  <path d="M48 58 l16 16 l34 -32" fill="none" stroke="#ff8a3d" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="164" y="86" font-family="Noto Sans JP, Arial, sans-serif" font-weight="900" font-size="58" fill="#16232a" letter-spacing="-1">Studio33</text>
+  <text x="167" y="118" font-family="Noto Sans JP, sans-serif" font-weight="700" font-size="17" fill="#0f8f86" letter-spacing="3">PC SUPPORT ・ SETAGAYA</text>
+</svg>
