@@ -50,7 +50,7 @@ def render(video_id: str, title: str) -> str:
     </div>
     <div class="shorts-text">
       <p class="eyebrow">毎朝7時に新作</p>
-      <h2>ネットとパソコンの<br>ひとくちヒント動画</h2>
+      <h2>ネット・パソコン・スマホの<br>ひとくちヒント動画</h2>
       <p class="shorts-title">{t}</p>
       <p class="shorts-links">
         <a class="btn" href="https://www.youtube.com/shorts/{video_id}" target="_blank" rel="noopener">ユーチューブで見る</a>
