@@ -33,7 +33,7 @@ BASE = "https://studio33-corp.net"
 POSTS_DIR = SITE / "blog" / "posts"
 REQUIRED = ["title", "description", "date", "slug", "image", "category"]
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-STATIC_PAGES = ["", "pricing.html", "personal-info.html", "privacy.html", "terms.html"]
+STATIC_PAGES = ["", "pricing.html", "development.html", "personal-info.html", "privacy.html", "terms.html"]
 
 md = MarkdownIt("commonmark", {"html": False, "linkify": False}).enable("table")
 

@@ -42,6 +42,7 @@
       <a class="btn btn-lg" href="#contact">ネットの不調を相談する</a>
       <a class="btn btn-ghost btn-lg" href="#internet">よくある症状を見る</a>
     </div>
+    <p class="development-entry"><a href="development.html"><strong>中小企業・小規模事業者向け 受託開発</strong><br>業務ツール・データ集計・定型業務の自動化をご相談ください →</a></p>
     <ul class="hero-points">
       <li>世田谷区の地元サポート</li>
       <li>ネット・Wi-Fiの不調が得意</li>
@@ -112,6 +113,15 @@
     <h2 class="center">ネットもパソコンも、スマホも。</h2>
     <p class="section-lead center">いちばんの得意はネットの不調。パソコンやスマートフォン（携帯）の設定・使い方・トラブルもご相談ください。</p>
     <div class="service-grid">
+      <article id="development" class="service">
+        <div class="service-body">
+          <span class="badge">事業者の皆さまへ</span>
+          <h3>業務ツール・受託開発</h3>
+          <p>中小企業・小規模事業者の業務に合わせて、小さな改善から。社内用Webアプリ、Excel・CSV処理、定型業務の自動化などをご相談いただけます。</p>
+          <p>初回相談・お見積もりは無料。設計・開発は有料・個別見積もりです。</p>
+          <p><a href="development.html">ご相談例・進め方・費用の考え方を見る →</a></p>
+        </div>
+      </article>
       <article class="service featured">
         <img src="img/wifi.jpg" alt="Wi-Fiルーターとスマートフォン" loading="lazy">
         <div class="service-body">
@@ -354,6 +364,7 @@
     <h2 class="center">ネット・パソコン・スマホの「困った」、<br>まずはご相談ください。</h2>
     <p class="center contact-lead">下のフォームに、お困りごとをそのままご記入ください。<br>うまく説明できなくても大丈夫です。</p>
 
+    <p class="center contact-lead">業務ツール・受託開発もご相談いただけます。<a class="contact-service-link" href="development.html">受託開発のご案内</a></p>
     <form class="contact-form" action="https://formsubmit.co/studio33corp@gmail.com" method="POST" accept-charset="UTF-8">
       <input type="hidden" name="_subject" value="【Studio33】ホームページからのご相談">
       <input type="hidden" name="_template" value="table">
@@ -403,6 +414,7 @@
           <label><input type="checkbox" name="ご相談の内容" value="セキュリティ対策"><span>セキュリティ</span></label>
           <label><input type="checkbox" name="ご相談の内容" value="使い方のご相談"><span>使い方</span></label>
           <label><input type="checkbox" name="ご相談の内容" value="その他"><span>その他</span></label>
+          <label><input id="development-inquiry" type="checkbox" name="ご相談の内容" value="受託開発のご相談"><span>受託開発のご相談</span></label>
         </div>
       </fieldset>
 
@@ -411,6 +423,7 @@
         <textarea name="お困りごと" rows="6" required placeholder="例）Wi-Fiがすぐ切れます。／スマホの通知音が出ません。機種名や、いつから困っているかも分かる範囲でお書きください。"></textarea>
       </label>
 
+      <p class="form-note">受託開発の初回相談では、機密情報・個人情報・パスワード・実データを送らず、業務の概要のみをご記入ください。設計・開発は有料・個別見積もりです。訪問サポートの料金・条件とは別に、対応可否や契約条件を相談します。</p>
     <!-- contact-terms -->
       <div role="group" aria-labelledby="contact-terms-heading">
         <h3 id="contact-terms-heading">お支払い・キャンセル・訪問日時</h3>
@@ -481,5 +494,6 @@
 <a class="mobile-cta" href="#contact">ネットの不調、相談する</a>
 
 <script src="chat.js" defer></script>
+<script src="contact-service.js" defer></script>
 </body>
 </html>

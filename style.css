@@ -436,3 +436,24 @@ section { padding: 88px 0; }
 .shorts-play { position: absolute; left: 50%; top: 82%; width: 72px; height: 72px; margin: -36px 0 0 -36px; border-radius: 50%; background: rgba(0, 0, 0, .55); transition: background .2s; }
 .shorts-play::after { content: ""; position: absolute; left: 29px; top: 22px; border-style: solid; border-width: 14px 0 14px 22px; border-color: transparent transparent transparent #fff; }
 .shorts-poster:hover .shorts-play { background: var(--warm); }
+
+/* Service additions reuse the site's typography, palette, and brand mark. */
+.development-entry { padding: 14px 18px; border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 12px 12px 0; }
+.development-entry a { color: var(--accent-dark); text-decoration: none; }
+.development-hero { background: var(--soft); }
+.development-hero h1 { font-size: clamp(1.9rem, 4.4vw, 3.1rem); font-weight: 900; }
+.development-hero .hero-lead { max-width: 760px; }
+.development-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.development-soft { background: var(--soft); }
+.development-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.development-steps li { padding: 24px 20px; }
+.contact-service-link { color: #fff; }
+.development-page section[id], #development, #development-pricing { scroll-margin-top: 80px; }
+.development-page .footer-inner nav { flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .development-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .development-grid { grid-template-columns: 1fr; }
+  .development-page .site-nav .btn { padding: 6px 10px; }
+}
