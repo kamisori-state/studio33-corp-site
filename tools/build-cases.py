@@ -72,7 +72,7 @@ def load_cases() -> list[dict]:
 def render(shown: list[dict]) -> str:
     if not shown:
         return ""
-    cards = "\n".join(f"""      <article class="case">
+    cards = "\n".join(f"""      <article class="case" role="group" aria-roledescription="スライド" aria-label="{i} / {len(shown)}">
         <p class="case-cat">{esc(c['category'])}</p>
         <h3>{esc(c['title'])}</h3>
         <dl>
@@ -80,13 +80,21 @@ def render(shown: list[dict]) -> str:
           <dt>Studio33 の対応</dt><dd>{esc(c['support'])}</dd>
         </dl>
         <p class="case-price">{esc(c['price'])}</p>
-      </article>""" for c in shown)
+      </article>""" for i, c in enumerate(shown, 1))
     return f"""<section id="cases" class="cases">
   <div class="wrap">
     <p class="eyebrow center">よくあるお困りごと</p>
-    <h2 class="center">こんなとき、ご相談ください</h2>
-    <div class="case-list">
+    <h2 id="cases-heading" class="center">こんなとき、ご相談ください</h2>
+    <div class="cases-carousel" role="region" aria-roledescription="カルーセル" aria-labelledby="cases-heading">
+    <p id="cases-help" class="cases-carousel-help">左右にスクロールしてご覧ください。キーボードでは左右矢印・Home・Endキーで操作できます。</p>
+    <div id="cases-track" class="cases-carousel-track" tabindex="0" aria-label="ご相談例一覧" aria-describedby="cases-help">
 {cards}
+    </div>
+    <div class="cases-carousel-controls" hidden>
+      <button type="button" data-cases-prev aria-controls="cases-track" aria-label="前のページ" aria-disabled="true">← 前へ</button>
+      <span class="cases-carousel-status" aria-live="polite" aria-atomic="true"></span>
+      <button type="button" data-cases-next aria-controls="cases-track" aria-label="次のページ">次へ →</button>
+    </div>
     </div>
     <p class="center case-note">よくあるご相談をもとにした例です。料金は税込・世田谷区内は出張費込みです。</p>
   </div>

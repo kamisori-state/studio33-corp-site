@@ -109,11 +109,9 @@ class SiteChecks(unittest.TestCase):
                     count += 1
         print(f'Checked {count} local links/assets (no external requests or form submissions).')
 
-    def test_generated_cases_unchanged(self):
-        original = subprocess.check_output(['git', 'show', 'HEAD:index.html'], cwd=ROOT).decode('utf-8')
-        current = (ROOT / 'index.html').read_text(encoding='utf-8')
-        pattern = r'<!-- CASES -->.*?<!-- /CASES -->'
-        self.assertEqual(re.search(pattern, original, re.S).group(), re.search(pattern, current, re.S).group())
+    def test_generated_cases_structure_and_data(self):
+        from test_home_carousel import HomeCarouselChecks
+        HomeCarouselChecks('test_generated_structure_and_latest_data').test_generated_structure_and_latest_data()
 
 
 if __name__ == '__main__':

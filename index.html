@@ -23,6 +23,7 @@
     <nav class="site-nav">
       <a href="#internet">ネットの不調</a>
       <a href="#services">サービス</a>
+      <a href="development.html">受託開発</a>
       <a class="nav-keep" href="pricing.html">料金</a>
       <a href="#area">対応エリア</a>
       <a class="btn btn-sm" href="#contact">ご相談はこちら</a>
@@ -113,8 +114,10 @@
     <h2 class="center">ネットもパソコンも、スマホも。</h2>
     <p class="section-lead center">いちばんの得意はネットの不調。パソコンやスマートフォン（携帯）の設定・使い方・トラブルもご相談ください。</p>
     <div class="service-grid">
-      <article id="development" class="service">
+      <article id="development" class="service development-service-card">
+        <img src="img/development-hero.webp" alt="業務ツールの画面と開発作業のイメージ" width="1536" height="1024" loading="lazy">
         <div class="service-body">
+          <p class="development-card-caption">画像はサービス内容のイメージです（AI生成）。</p>
           <span class="badge">事業者の皆さまへ</span>
           <h3>業務ツール・受託開発</h3>
           <p>中小企業・小規模事業者の業務に合わせて、小さな改善から。社内用Webアプリ、Excel・CSV処理、定型業務の自動化などをご相談いただけます。</p>
@@ -187,9 +190,11 @@
 <section id="cases" class="cases">
   <div class="wrap">
     <p class="eyebrow center">よくあるお困りごと</p>
-    <h2 class="center">こんなとき、ご相談ください</h2>
-    <div class="case-list">
-      <article class="case">
+    <h2 id="cases-heading" class="center">こんなとき、ご相談ください</h2>
+    <div class="cases-carousel" role="region" aria-roledescription="カルーセル" aria-labelledby="cases-heading">
+    <p id="cases-help" class="cases-carousel-help">左右にスクロールしてご覧ください。キーボードでは左右矢印・Home・Endキーで操作できます。</p>
+    <div id="cases-track" class="cases-carousel-track" tabindex="0" aria-label="ご相談例一覧" aria-describedby="cases-help">
+      <article class="case" role="group" aria-roledescription="スライド" aria-label="1 / 6">
         <p class="case-cat">パソコン</p>
         <h3>パソコンの更新が終わらず使えない</h3>
         <dl>
@@ -198,7 +203,7 @@
         </dl>
         <p class="case-price">トラブル診断 3,300円〜</p>
       </article>
-      <article class="case">
+      <article class="case" role="group" aria-roledescription="スライド" aria-label="2 / 6">
         <p class="case-cat">データ・バックアップ</p>
         <h3>パソコンの写真をバックアップしていない</h3>
         <dl>
@@ -207,7 +212,7 @@
         </dl>
         <p class="case-price">使い方レッスン60分 3,300円</p>
       </article>
-      <article class="case">
+      <article class="case" role="group" aria-roledescription="スライド" aria-label="3 / 6">
         <p class="case-cat">パソコン</p>
         <h3>オンライン会議でカメラやマイクが使えない</h3>
         <dl>
@@ -216,7 +221,7 @@
         </dl>
         <p class="case-price">トラブル診断 3,300円〜</p>
       </article>
-      <article class="case">
+      <article class="case" role="group" aria-roledescription="スライド" aria-label="4 / 6">
         <p class="case-cat">パソコン</p>
         <h3>パソコンの電源ボタンを押しても起動しない</h3>
         <dl>
@@ -225,7 +230,7 @@
         </dl>
         <p class="case-price">トラブル診断 3,300円〜</p>
       </article>
-      <article class="case">
+      <article class="case" role="group" aria-roledescription="スライド" aria-label="5 / 6">
         <p class="case-cat">セキュリティ</p>
         <h3>ウイルス感染の警告が突然表示された</h3>
         <dl>
@@ -234,7 +239,7 @@
         </dl>
         <p class="case-price">セキュリティ対策 3,300円〜</p>
       </article>
-      <article class="case">
+      <article class="case" role="group" aria-roledescription="スライド" aria-label="6 / 6">
         <p class="case-cat">パソコン</p>
         <h3>キーボードやマウスが反応しない</h3>
         <dl>
@@ -243,6 +248,12 @@
         </dl>
         <p class="case-price">トラブル診断 3,300円〜</p>
       </article>
+    </div>
+    <div class="cases-carousel-controls" hidden>
+      <button type="button" data-cases-prev aria-controls="cases-track" aria-label="前のページ" aria-disabled="true">← 前へ</button>
+      <span class="cases-carousel-status" aria-live="polite" aria-atomic="true"></span>
+      <button type="button" data-cases-next aria-controls="cases-track" aria-label="次のページ">次へ →</button>
+    </div>
     </div>
     <p class="center case-note">よくあるご相談をもとにした例です。料金は税込・世田谷区内は出張費込みです。</p>
   </div>
@@ -495,5 +506,6 @@
 
 <script src="chat.js" defer></script>
 <script src="contact-service.js" defer></script>
+<script src="cases-carousel.js" defer></script>
 </body>
 </html>

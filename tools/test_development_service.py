@@ -96,7 +96,9 @@ class DevelopmentChecks(unittest.TestCase):
     def test_baseline_protection(self):
         for name in ['index.html','pricing.html']:
             self.assertEqual(re.findall(r'\d[\d,]*円', original(name)), re.findall(r'\d[\d,]*円', text(name)))
-        for marker in ['CASES','BLOG:LATEST','VOICES','SHORT']:
+        from test_home_carousel import case_content
+        self.assertEqual(case_content(original('index.html')), case_content(text('index.html')))
+        for marker in ['BLOG:LATEST','VOICES','SHORT']:
             pattern = r'<!-- ' + marker + r' -->.*?<!-- /' + marker + r' -->'
             self.assertEqual(re.findall(pattern, original('index.html'), re.S), re.findall(pattern, text('index.html'), re.S), marker)
         for name in ['cases/cases.yml','voices/voices.yml','personal-info.html','privacy.html','terms.html','chat.js']:

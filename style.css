@@ -419,6 +419,23 @@ section { padding: 88px 0; }
 @media (max-width: 900px) { .case-list { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .case-list { grid-template-columns: 1fr; } }
 
+/* Homepage consultation carousel: native scrolling remains usable without JS. */
+.cases-carousel { margin-top: 32px; }
+.cases-carousel-help { color: var(--muted); font-size: .85rem; text-align: center; }
+.cases-carousel-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 44px) / 3); gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding: 4px 0 16px; }
+.cases-carousel-track > .case { scroll-snap-align: start; min-width: 0; overflow-wrap: anywhere; }
+.cases-carousel-track:focus-visible, .cases-carousel-controls button:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: 3px; }
+.cases-carousel-controls:not([hidden]) { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
+.cases-carousel-controls button { min-width: 88px; min-height: 44px; border: 1px solid var(--accent-dark); border-radius: 999px; background: #fff; color: var(--accent-dark); font: inherit; font-weight: 700; cursor: pointer; }
+.cases-carousel-controls button[aria-disabled="true"] { opacity: .5; cursor: default; }
+.cases-carousel-status { font-size: .9rem; color: var(--muted); }
+.development-service-card > img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: right center; }
+.development-service-card .service-body p + p { margin-top: 12px; }
+.development-service-card .service-body .development-card-caption { font-size: .72rem; margin-bottom: 12px; }
+@media (max-width: 900px) { .cases-carousel-track { grid-auto-columns: calc((100% - 22px) / 2); } }
+@media (max-width: 640px) { .cases-carousel-track { grid-auto-columns: 100%; } }
+@media (prefers-reduced-motion: reduce) { .cases-carousel-track { scroll-behavior: auto; } }
+
 /* 最新のショート */
 .shorts { padding: 72px 0; }
 .shorts-inner { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; max-width: 900px; }
@@ -468,7 +485,8 @@ section { padding: 88px 0; }
   .development-page .site-nav .btn { padding: 6px 10px; white-space: nowrap; }
 }
 @media (max-width: 360px) {
-  .development-page .site-header .brand { font-size: 1rem; gap: 6px; white-space: nowrap; }
-  .development-page .site-header .brand-mark { width: 30px; height: 30px; }
-  .development-page .site-nav .nav-keep { display: none; }
+  .site-header .brand { font-size: 1rem; gap: 6px; white-space: nowrap; }
+  .site-header .brand-mark { width: 30px; height: 30px; }
+  .site-header .site-nav .nav-keep { display: none; }
+  .site-header .site-nav .btn { padding: 6px 10px; white-space: nowrap; }
 }
