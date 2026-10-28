@@ -440,9 +440,14 @@ section { padding: 88px 0; }
 /* Service additions reuse the site's typography, palette, and brand mark. */
 .development-entry { padding: 14px 18px; border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 12px 12px 0; }
 .development-entry a { color: var(--accent-dark); text-decoration: none; }
-.development-hero { background: var(--soft); }
+.development-hero { position: relative; isolation: isolate; overflow: hidden; background: var(--soft); padding: 80px 0; }
+.development-hero-visual { position: absolute; inset: 0; margin: 0; z-index: -1; }
+.development-hero-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.development-hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 34%, rgba(255,255,255,.70) 48%, rgba(255,255,255,.06) 72%); }
+.development-hero-visual figcaption { position: absolute; z-index: 1; right: 16px; bottom: 12px; max-width: calc(100% - 32px); padding: 3px 8px; background: rgba(255,255,255,.90); border-radius: 4px; color: #35454b; font-size: .7rem; line-height: 1.5; }
 .development-hero h1 { font-size: clamp(1.9rem, 4.4vw, 3.1rem); font-weight: 900; }
-.development-hero .hero-lead { max-width: 760px; }
+.development-hero-content > * { max-width: 600px; }
+.development-hero .hero-lead { max-width: 560px; }
 .development-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .development-soft { background: var(--soft); }
 .development-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -452,8 +457,18 @@ section { padding: 88px 0; }
 .development-page .footer-inner nav { flex-wrap: wrap; }
 @media (max-width: 900px) {
   .development-steps { grid-template-columns: 1fr; }
+  .development-hero { padding: 0 0 44px; background: #fff; }
+  .development-hero-visual { position: relative; inset: auto; z-index: 0; height: clamp(240px, 38vw, 340px); overflow: hidden; }
+  .development-hero-image { position: absolute; right: 0; width: 145%; max-width: none; object-position: right center; }
+  .development-hero-visual::after { background: linear-gradient(0deg, #fff 0%, rgba(255,255,255,0) 20%); }
+  .development-hero-content { padding-top: 30px; }
 }
 @media (max-width: 640px) {
   .development-grid { grid-template-columns: 1fr; }
-  .development-page .site-nav .btn { padding: 6px 10px; }
+  .development-page .site-nav .btn { padding: 6px 10px; white-space: nowrap; }
+}
+@media (max-width: 360px) {
+  .development-page .site-header .brand { font-size: 1rem; gap: 6px; white-space: nowrap; }
+  .development-page .site-header .brand-mark { width: 30px; height: 30px; }
+  .development-page .site-nav .nav-keep { display: none; }
 }

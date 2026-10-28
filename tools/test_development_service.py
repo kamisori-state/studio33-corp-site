@@ -37,6 +37,24 @@ class DevelopmentChecks(unittest.TestCase):
             strip_generated = lambda s: re.sub(r'<!-- (CASES|BLOG:LATEST) -->.*?<!-- /\1 -->', '', s, flags=re.S)
             self.assertEqual(strip_generated(text('index.html')), strip_generated(rebuilt))
 
+    def test_development_hero_image(self):
+        source = text('development.html')
+        doc = Document(source)
+        images = [a for t,a in doc.tags if t == 'img' and a.get('class') == 'development-hero-image']
+        self.assertEqual(1, len(images), 'The development hero needs its own image')
+        image = images[0]
+        self.assertEqual('img/development-hero.webp', image.get('src'))
+        self.assertTrue((ROOT / image['src']).is_file())
+        self.assertTrue(image.get('alt'))
+        self.assertEqual('high', image.get('fetchpriority'))
+        self.assertTrue(int(image['width']) > int(image['height']) > 0)
+        self.assertIn('画像はサービス内容のイメージです', source)
+        self.assertIn('AI生成', source)
+        self.assertIn('img/development-hero.webp', source.split('og:image')[1].split('>')[0])
+        css = text('style.css')
+        self.assertIn('.development-hero-image', css)
+        self.assertIn('object-fit: cover', css)
+
     def test_service_scope_and_terms(self):
         source = text('development.html')
         for token in ['中小企業', '小規模事業者', 'ご相談例', '業務ツール', '社内用Webアプリ', 'Excel', 'CSV', '定型業務', '小規模改善', '初回相談', '無料', '設計・開発は有料', '個別見積', 'サーバー', '外部サービス', '保守', '対応可否', '仕様', '納期', '納品', '検収', '見積もり・契約時', '機密情報', '個人情報', '概要のみ', '要件整理', '見積もり合意', '開発・確認']:
